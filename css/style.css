@@ -48,7 +48,7 @@ li {
   padding-bottom: 5px;
 }
 
-.custom-navbar .navbar-brand img {
+.navbar-brand img {
   width: 6rem;
   height: 6rem;
   border-radius: 2.8rem;
@@ -341,6 +341,14 @@ li {
 
 .product-section {
   padding: 7rem 0;
+}
+
+.co_section .product_block img{
+  width: 80%;
+}
+.co_section .product_block::before{
+  width: 80%;
+  left: 3.5rem;
 }
 
 .product_block {
@@ -1037,7 +1045,7 @@ li {
   font-size: 14px !important;
 }
 
-.co_section {
+.product-section {
   padding: 7rem 0;
 }
 
