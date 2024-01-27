@@ -42,6 +42,7 @@ li {
   border: none;
 }
 
+/* Navbar */
 .custom-navbar {
   background: #3b5d50 !important;
   padding-top: 5px;
@@ -120,6 +121,35 @@ li {
   width: calc(100% - 16px);
 }
 
+form {
+  position: relative;
+}
+
+form input {
+  position: relative;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  padding: 0.2rem 1rem;
+  background: #D4C698;
+}
+
+form .fa-search {
+  position: absolute;
+  font-size: 1.1rem;
+  color: #474747;
+  left: 0.6rem;
+  top: .6rem;
+}
+
+form input::placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 1.4rem;
+  letter-spacing: .06rem;
+  color: #474747;
+}
+
 .custom-navbar .custom-navbar-cta {
   background: #3b5d50;
   border-radius: 5rem;
@@ -146,9 +176,53 @@ li {
   margin-right: 20px;
 }
 
+
+/* Hero section */
+.home {
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+}
+
 .hero {
   background: #3b5d50;
+  width: 100%;
+  height: 100%;
   padding: calc(4rem - 30px) 0 0rem 0;
+}
+
+#heroCarousel {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: -6.2rem;
+}
+
+#heroCarousel img {
+  width: 100%;
+  height: 75vh;
+  border-radius: 0%;
+}
+
+.carousel-caption {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: -2rem;
+}
+
+.carousel-caption h1 {
+  color: #fff !important;
+  text-shadow: 2px 2px 12px #D4C698;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: left;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  color: #fff !important;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
@@ -313,6 +387,10 @@ li {
 
 .section-title {
   color: #2f2f2f;
+  width: fit-content;
+  margin: auto;
+  border-bottom: .2rem solid #f9bf29;
+  margin-bottom: 2rem;
 }
 
 /* product */
@@ -343,10 +421,11 @@ li {
   padding: 7rem 0;
 }
 
-.co_section .product_block img{
+.co_section .product_block img {
   width: 80%;
 }
-.co_section .product_block::before{
+
+.co_section .product_block::before {
   width: 80%;
   left: 3.5rem;
 }
@@ -354,7 +433,7 @@ li {
 .product_block {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 70vh;
 }
 
 .carousel-item img {
@@ -376,42 +455,56 @@ li {
   content: '';
   position: absolute;
   width: 100%;
-  height: 50vh;
-  background: linear-gradient(to bottom, #3b5d50, #09ab72);
-  /* background: linear-gradient(to right, #f6ce69, #f8be2c); */
-  left: 2rem;
-  top: 4.4rem;
+  height: 56vh;
+  background-color: #daa807a6;
+  top: 2.4rem;
   border-radius: .6rem;
   z-index: -1;
 }
 
 .product-info {
   position: relative;
-  text-align: left;
-  padding: .2rem 0 0 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .product-info h3 {
   color: #fff;
+  font-size: 1.4rem;
 }
 
 .product-info p {
-  color: #eff2f1;
-  font-weight: 700;
+  color: #fff;
+  letter-spacing: .08rem;
+  font-weight: 500;
 }
 
 .cart {
   position: relative;
-  margin-top: -2.8rem;
-  margin-right: -14rem;
+  width: 60px;
+  height: 60px;
+  background: #3b5d50df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -1.4rem;
+  margin: auto;
+  padding: 0;
+  transition: all ease-in-out .3s;
 }
 
-.cart a {
-  color: #fee210;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  text-decoration: none;
+.cart img {
+  padding: 0;
+  margin: 0;
+  width: 35px;
+}
+
+.cart:hover {
+  scale: 1.2;
 }
 
 /*  */
@@ -750,15 +843,11 @@ li {
   border-radius: 5rem;
 }
 
-.testimonial-slider-wrap .item .testimonial-block .author-info .author-pic img {
-  max-width: 80px;
-  border-radius: 50%;
-}
-
-.testimonial-slider-wrap .item .testimonial-block .author-info h3 {
-  font-size: 14px;
+.author-info h3 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #2f2f2f;
+  color: #f9bf29;
   margin-bottom: 0;
 }
 
@@ -855,8 +944,15 @@ li {
   padding: 7rem 0 12rem 0 !important;
 }
 
+
+/* Blog section */
+
 .blog-section {
   padding: 7rem 0 12rem 0;
+}
+
+.blog_title {
+  margin-left: -20rem;
 }
 
 .blog-section .post-entry a {
